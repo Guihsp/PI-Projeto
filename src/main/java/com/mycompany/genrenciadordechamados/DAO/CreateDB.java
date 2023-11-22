@@ -14,6 +14,7 @@ public class CreateDB {
                     "root");
             if (connection != null) {
                 System.out.println("Conexão com o banco de dados estabelecida!");
+                // suicid(connection);
                 createDatabase(connection);
                 useDatabase(connection);
                 createUserTable(connection);
@@ -22,6 +23,13 @@ public class CreateDB {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    private static void suicid (Connection connection) throws SQLException{
+        String suicidSQL = "DROP DATABASE tasksPlataform";
+        try (Statement statement = connection.createStatement()) {
+            statement.execute(suicidSQL);
         }
     }
 
@@ -57,14 +65,15 @@ public class CreateDB {
                 + "id INT AUTO_INCREMENT PRIMARY KEY,"
                 + "titulo VARCHAR(255),"
                 + "descricao TEXT,"
-                + "dataCriacao DATE,"
-                + "dataAtualizacao DATE,"
-                + "dataConclusao DATE,"
+                + "dataCriacao VARCHAR(5),"
+                + "dataAtualizacao VARCHAR(5),"
+                + "dataConclusao VARCHAR(5),"
                 + "status VARCHAR(255),"
                 + "tipoDeServico VARCHAR(255),"
                 + "departamento VARCHAR(255),"
-                + "resposta VARCHAR(500),"
+                + "chat TEXT,"
                 + "user_id INT NOT NULL,"
+                + "atendente_id INT,"
                 + "CONSTRAINT FK_TasksUser FOREIGN KEY (user_id) REFERENCES User(id)"
                 + ")";
         try (Statement statement = connection.createStatement()) {

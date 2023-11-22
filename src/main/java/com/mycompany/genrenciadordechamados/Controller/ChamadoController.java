@@ -41,6 +41,16 @@ public class ChamadoController {
         }
     }
 
+    public List<ChamadoModel> getChamadoByStatus(String status) {
+        try {
+            System.out.println(status);
+            return chamadoDAO.getChamadosbyStatus(status);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public List<ChamadoModel> getChamadosByUserId(int userId) {
         try {
             return chamadoDAO.getChamadosByUserId(userId);

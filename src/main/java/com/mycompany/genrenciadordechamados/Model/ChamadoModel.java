@@ -1,19 +1,17 @@
 package com.mycompany.genrenciadordechamados.Model;
-
-import java.sql.Date;
-
 public class ChamadoModel {
     private int id;
     private String titulo;
     private String descricao;
-    private Date dataCriacao;
-    private Date dataAtualizacao;
-    private Date dataConclusao;
+    private String dataCriacao;
+    private String dataAtualizacao;
+    private String dataConclusao;
     private String status;
     private String tipoDeServico;
     private String departamento;
-    private String resposta;
+    private String chat;
     private int user_id;
+    private int atendente_id;
 
     public ChamadoModel() {
     }
@@ -41,27 +39,27 @@ public class ChamadoModel {
         this.descricao = descricao;
     }
 
-    public Date getDataCriacao() {
+    public String getDataCriacao() {
         return dataCriacao;
     }
 
-    public void setDataCriacao(Date dataCriacao) {
+    public void setDataCriacao(String dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
 
-    public Date getDataAtualizacao() {
+    public String getDataAtualizacao() {
         return dataAtualizacao;
     }
 
-    public void setDataAtualizacao(Date dataAtualizacao) {
+    public void setDataAtualizacao(String dataAtualizacao) {
         this.dataAtualizacao = dataAtualizacao;
     }
 
-    public Date getDataConclusao() {
+    public String getDataConclusao() {
         return dataConclusao;
     }
 
-    public void setDataConclusao(Date dataConclusao) {
+    public void setDataConclusao(String dataConclusao) {
         this.dataConclusao = dataConclusao;
     }
 
@@ -89,12 +87,12 @@ public class ChamadoModel {
         this.departamento = departamento;
     }
 
-    public String getResposta() {
-        return resposta;
+    public String getChat() {
+        return chat;
     }
 
-    public void setResposta(String resposta) {
-        this.resposta = resposta;
+    public void setChat(String chat) {
+        this.chat = chat;
     }
 
     public int getUser_id() {
@@ -103,6 +101,14 @@ public class ChamadoModel {
 
     public void setUser_id(int user_id) {
         this.user_id = user_id;
+    }
+
+    public int getAtendente_id() {
+        return atendente_id;
+    }
+
+    public void setAtendente_id(int atendente_id) {
+        this.atendente_id = atendente_id;
     }
 
     @Override
@@ -117,8 +123,9 @@ public class ChamadoModel {
                 ", status='" + status + '\'' +
                 ", tipoDeServico='" + tipoDeServico + '\'' +
                 ", departamento='" + departamento + '\'' +
-                ", resposta='" + resposta + '\'' +
+                ", chat='" + chat + '\'' +
                 ", user_id=" + user_id +
+                ", atendente_id=" + atendente_id +
                 '}';
     }
 }

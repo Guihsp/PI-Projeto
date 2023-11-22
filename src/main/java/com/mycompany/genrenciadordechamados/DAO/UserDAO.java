@@ -25,7 +25,7 @@ public class UserDAO {
     }
 
     public UserModel getUserByIdWithChamados(int id) throws SQLException {
-        String sql = "SELECT c.id AS chamado_id, c.titulo, c.descricao, c.dataCriacao, c.dataAtualizacao, c.dataConclusao, c.status, c.tipoDeServico, c.departamento, c.resposta "
+        String sql = "SELECT c.id AS chamado_id, c.titulo, c.descricao, c.dataCriacao, c.dataAtualizacao, c.dataConclusao, c.status, c.tipoDeServico, c.departamento, c.chat, c.atendente_id "
                 +
                 "FROM Task c " +
                 "WHERE c.user_id = ?";
@@ -41,13 +41,14 @@ public class UserDAO {
                     chamado.setId(rs.getInt("chamado_id"));
                     chamado.setTitulo(rs.getString("titulo"));
                     chamado.setDescricao(rs.getString("descricao"));
-                    chamado.setDataCriacao(rs.getDate("dataCriacao"));
-                    chamado.setDataAtualizacao(rs.getDate("dataAtualizacao"));
-                    chamado.setDataConclusao(rs.getDate("dataConclusao"));
+                    chamado.setDataCriacao(rs.getString("dataCriacao"));
+                    chamado.setDataAtualizacao(rs.getString("dataAtualizacao"));
+                    chamado.setDataConclusao(rs.getString("dataConclusao"));
                     chamado.setStatus(rs.getString("status"));
                     chamado.setTipoDeServico(rs.getString("tipoDeServico"));
                     chamado.setDepartamento(rs.getString("departamento"));
-                    chamado.setResposta(rs.getString("resposta"));
+                    chamado.setChat(rs.getString("chat"));
+                    chamado.setAtendente_id(rs.getInt("atendente_id"));
 
                     user.getChamados().add(chamado);
                 }

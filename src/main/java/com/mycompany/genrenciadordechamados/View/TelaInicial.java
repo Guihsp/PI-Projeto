@@ -188,14 +188,14 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
-        TelaAbrirChamado telaAbrirChamado = new TelaAbrirChamado(userId);
+        TelaAbrirChamado telaAbrirChamado = new TelaAbrirChamado(tipoUsuario, userId);
         telaAbrirChamado.setVisible(true);
         this.dispose();
     }
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {
-        TelaAcompanharChamado telaAcompanharChamado = new TelaAcompanharChamado();
-        telaAcompanharChamado.setVisible(true);
+        TelaAcompanharChamados telaAcompanharChamados = new TelaAcompanharChamados(tipoUsuario, userId);
+        telaAcompanharChamados.setVisible(true);
         this.dispose();
     }
 
