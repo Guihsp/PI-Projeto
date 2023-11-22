@@ -96,7 +96,6 @@ public class TelaMeusChamados extends javax.swing.JFrame {
                 chatTableModel.setRowCount(0);
 
                 String chat = chamado.getChat();
-                System.out.println(chat);
                 if (chat != null && !chat.isEmpty()) {
                         String[] conversas = chat.split("\n");
 
@@ -418,7 +417,6 @@ public class TelaMeusChamados extends javax.swing.JFrame {
 
                 DefaultTableModel chatTableModel = (DefaultTableModel) jTable3.getModel();
                 String[] conversa = resposta.split(":", 2);
-                System.out.println(conversa.length);
                 if (conversa.length == 2) {
                         chatTableModel.addRow(new Object[] { conversa[0], conversa[1] });
                 }

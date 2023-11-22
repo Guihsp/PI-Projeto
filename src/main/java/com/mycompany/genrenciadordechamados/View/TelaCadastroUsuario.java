@@ -252,11 +252,9 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
 
     String typeUser = (String) jComboBox1.getSelectedItem();
 
-    System.out.println("typeuser =====================>" + typeUser);
 
     UserModel newUser = new UserModel(nome, email, senha, typeUser);
     
-    System.out.println("createdUser =====================>" + newUser);
     UserModel createdUser = userController.createUser(newUser);
 
 

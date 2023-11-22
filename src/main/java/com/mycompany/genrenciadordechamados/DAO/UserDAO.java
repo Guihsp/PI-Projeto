@@ -81,7 +81,6 @@ public class UserDAO {
         String hashedPassword = hashPassword(user.getPassword());
         String sql = "INSERT INTO User (name, email, password, typeUser) VALUES (?, ?, ?, ?)";
 
-        System.out.println(user.getTypeUser());
         try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             ps.setString(1, user.getName());
             ps.setString(2, user.getEmail());
@@ -129,7 +128,6 @@ public class UserDAO {
         try (PreparedStatement ps = connection.prepareStatement(sql)) {
             ps.setString(1, email);
             try (ResultSet rs = ps.executeQuery()) {
-                System.out.println("email ========================>" + email);
                 if (rs.next()) {
                     UserModel user = new UserModel(
                             rs.getInt("id"),

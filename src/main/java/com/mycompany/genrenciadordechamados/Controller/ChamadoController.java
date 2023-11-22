@@ -43,7 +43,6 @@ public class ChamadoController {
 
     public List<ChamadoModel> getChamadoByStatus(String status) {
         try {
-            System.out.println(status);
             return chamadoDAO.getChamadosbyStatus(status);
         } catch (SQLException e) {
             e.printStackTrace();

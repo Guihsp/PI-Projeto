@@ -456,7 +456,6 @@ public class TelaAcompanharChamados extends javax.swing.JFrame {
 
         DefaultTableModel chatTableModel = (DefaultTableModel) jTable3.getModel();
         String[] conversa = resposta.split(":", 2);
-        System.out.println(conversa.length);
         if (conversa.length == 2) {
             chatTableModel.addRow(new Object[] { conversa[0], conversa[1] });
         }
@@ -487,7 +486,6 @@ public class TelaAcompanharChamados extends javax.swing.JFrame {
 
         DefaultTableModel chatTableModel = (DefaultTableModel) jTable3.getModel();
         String[] conversa = resposta.split(":", 2);
-        System.out.println(conversa.length);
         if (conversa.length == 2) {
             chatTableModel.addRow(new Object[] { conversa[0], conversa[1] });
         }

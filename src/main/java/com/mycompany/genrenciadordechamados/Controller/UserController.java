@@ -15,7 +15,6 @@ public class UserController {
 
     public UserModel createUser(UserModel user) {
         try {
-            System.out.println("user =============================> "+user);
             return userDAO.createUser(user);
         } catch (SQLException e) {
             e.printStackTrace();
