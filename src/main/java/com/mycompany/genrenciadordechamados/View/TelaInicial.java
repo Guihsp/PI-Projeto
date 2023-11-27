@@ -49,6 +49,7 @@ public class TelaInicial extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -63,9 +64,13 @@ public class TelaInicial extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 102, 255));
         jLabel1.setText("Tela Inicial");
 
+        jButton4.setBackground(new java.awt.Color(102, 153, 255));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Meus Chamados");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,13 +78,20 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(102, 102, 255));
+        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Cadastrar Usuário");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
+
         });
 
+        jButton6.setBackground(new java.awt.Color(102, 153, 255));
+        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Novo Chamado");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +99,9 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setBackground(new java.awt.Color(102, 102, 255));
+        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Acompanhar Chamado");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,20 +149,20 @@ public class TelaInicial extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
                 jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(110, 110, 110)
-                                                .addComponent(jLabel1))
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(73, 73, 73)
-                                                .addComponent(jLabel2)))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE,
                                         javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(95, 95, 95)));
+                                .addGap(95, 95, 95))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(73, 73, 73)
+                                                .addComponent(jLabel2))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(93, 93, 93)
+                                                .addComponent(jLabel1)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel1Layout.setVerticalGroup(
                 jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
@@ -182,7 +197,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
-        TelaCadastroUsuario telaCadastroUsuario = new TelaCadastroUsuario();
+        TelaCadastroUsuario telaCadastroUsuario = new TelaCadastroUsuario(tipoUsuario, userId);
         telaCadastroUsuario.setVisible(true);
         this.dispose();
     }
